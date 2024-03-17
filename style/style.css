@@ -1,0 +1,417 @@
+:root {
+  --yellow : #ffff00;
+  --blue : #11a9df;
+}
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'Road Rage';
+  src: url('fonts/Road_Rage.otf');
+}
+
+@font-face {
+  font-family: 'Threefortysixbarrel';
+  src: url('fonts/Threefortysixbarrel W00 Intake.otf');
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px black;
+  height: 75px;
+  width: 100%;
+  z-index: 100;
+}
+
+header a {
+  text-decoration: none;
+  display: flex;
+  font-family: 'Threefortysixbarrel', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--yellow);
+  text-shadow: 0 0 10px black;
+}
+
+.logo img {
+  width: 75px;
+  height: 75px;
+  margin-left: 20px;
+}
+
+.logo h1 {
+  font-family: 'Road Rage', sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+nav {
+  font-size: 2rem;
+  margin-right: 20px
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+nav li a {
+  transition: 0.25s ease-in-out;
+  text-decoration: none;
+  color: white;
+  font-family: 'Threefortysixbarrel', sans-serif;
+}
+
+nav li a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-page {
+  position: relative;
+  z-index: 1;
+  height: 100svh;
+  width: 100svw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#home-page .cover {
+  width: 100svw;
+  height: 100svh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: absolute
+}
+
+@keyframes loadIn {
+  0% {
+    top: -200vw;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes downToUp {
+  0% {
+    left: -200vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+#home-page iframe {
+  position: relative;
+  width: 50svw;
+  animation: loadIn 2s;
+  transition: 0.5s ease-in-out;
+  z-index: 90;
+  aspect-ratio: 16/9;
+  box-shadow: 0 0 30px black;
+}
+
+#home-page,
+#about-page,
+#mods-page,
+#content-page,
+#no-page {
+  position: relative;
+  z-index: 1;
+  height: 100svh;
+  width: 100svw;
+  background-image: url('./assets/bgPic2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#about-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+#about-page .text {
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  color: var(--yellow);
+  box-shadow: 0 0 10px black;
+  animation: downToUp 2s;
+  transition: 0.5s ease-in-out;
+}
+
+#about-page img {
+  animation: loadIn 2s;
+  transition: 0.5s ease-in-out;
+}
+
+#about-page .text h1,
+#about-page .text p {
+  font-family: 'Threefortysixbarrel', sans-serif;
+}
+
+#about-page h1 {
+  font-size: 3rem;
+}
+
+#about-page p {
+  font-size: 1.25rem;
+}
+
+#about-page .text h1 span {
+  color: var(--blue);
+  margin-left: 10px;
+  font-family: 'Road Rage', sans-serif;
+}
+
+#about-page .text p span {
+  font-family: 'Threefortysixbarrel', sans-serif;
+  color: red;
+}
+
+#about-page img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 0 10px black;
+}
+
+#about-page img:hover {
+  box-shadow: 0 0 30px var(--yellow);
+}
+
+#mods-page {
+  flex-direction: column;
+}
+
+#mods-page .title {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 70vw;
+  color: var(--yellow);
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  font-size: 1.25rem;
+  animation: downToUp 2s;
+  transition: 0.5s ease-in-out;
+}
+
+#mods-page .title h1,
+#mods-page p {
+  font-family: 'Threefortysixbarrel', sans-serif;
+}
+
+#mods-page #mod a {
+  font-family: 'Road Rage', sans-serif;
+}
+
+#mods-page .mods-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 70svw;
+  overflow-y: scroll;
+  height: 50svh;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  box-shadow: 0 0 10px black;
+  font-family: 'Threefortysixbarrel';
+  animation: downToUp 2s;
+  transition: 0.5s ease-in-out;
+}
+
+#mods-page #mod {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border: solid 5px var(--blue);
+  transition: 0.5 ease-in-out;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mods-page #mod a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+#mods-page #mod a:hover {
+  transition: 0.2s ease;
+  color: #77d1f1;
+}
+
+#mods-page #mod h1 {
+  font-family: 'Road Rage', sans-serif;
+  width: 100%;
+  position: relative;
+  top: 0;
+  text-align: center;
+  text-shadow: 0 0 10px black;
+}
+
+#mods-page #mod p {
+  width: 90%;
+  margin: 20px;
+  color: var(--yellow);
+  font-size: 1.25rem;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#content-page {
+  flex-direction: column;
+}
+
+#content-page h1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 20vw;
+  color: var(--yellow);
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  font-family: 'Threefortysixbarrel';
+  font-size: 1.25rem;
+  animation: downToUp 2s;
+  transition: 0.5s ease-in-out;
+}
+
+#content-page iframe {
+  width: 50vw;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin: 20px;
+  box-shadow: 0 0 20px black;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 75px;
+  font-size: 0.75rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+  box-shadow: 0 0 10px black;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+}
+
+footer h1 {
+  font-family: 'Threefortysixbarrel', sans-serif;
+}
+
+footer .social-media-container {
+  display: flex;
+  gap: 30px;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+footer .social-media-container a {
+  text-decoration: none;
+  color: var(--yellow);
+  transition: 0.2s ease-in-out;
+}
+
+footer .social-media-container a:hover {
+  scale: 1.5;
+  color: var(--blue);
+}
+
+#no-page {
+  font-size: 1.5rem;
+  color: var(--yellow);
+  font-family: 'Threefortysixbarrel';
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    display: none;
+  }
+
+  header ul {
+    gap: 20px;
+    font-size: 1rem;
+  }
+
+  #home-page iframe {
+    width: 90svw;
+  }
+
+  #about-page {
+    flex-direction: column;
+
+    & img {
+      display: none;
+    }
+  }
+
+  #about-page .text {
+    width: 90%;
+    position: relative;
+    margin-bottom: 100px;
+  }
+
+  #about-page h1 {
+    font-size: 2rem;
+  }
+
+  #about-page p {
+    font-size: 1rem;
+  }
+
+  #content-page iframe {
+    aspect-ratio: 16/9;
+    width: 90%;
+    height: auto;
+  }
+
+  #mods-page .mods-container {
+    height: 30svh;
+  }
+}

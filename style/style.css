@@ -519,16 +519,16 @@ footer .social-media-container a:hover {
 }
 
 .shirt {
-  animation: pop-out-left 2s;
+  animation: pop-out-left 1s;
   rotate: -20deg;
 }
 
 .mug {
-  animation: pop-out-bottom 2s;
+  animation: pop-out-bottom 1s;
 }
 
 .hoodie {
-  animation: pop-out-right 2s;
+  animation: pop-out-right 1s;
   rotate: 20deg;
 }
 

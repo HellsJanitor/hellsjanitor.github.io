@@ -20,6 +20,7 @@
 
 body {
   background-color: black;
+  overflow: hidden;
 }
 
 header {
@@ -71,13 +72,26 @@ nav ul {
 }
 
 nav li a {
+  display: flex;
+  align-items: center;
+}
+
+.text-nav {
+  display: block;
+}
+
+.icon-nav {
+  display: none;
+}
+
+nav li span {
   transition: 0.25s ease-in-out;
   text-decoration: none;
   color: white;
   font-family: 'Threefortysixbarrel', sans-serif;
 }
 
-nav li a:hover {
+nav li span:hover {
   color: var(--yellow);
   text-decoration: underline;
   text-decoration-color: var(--blue);
@@ -141,7 +155,9 @@ nav li a:hover {
 #about-page,
 #mods-page,
 #content-page,
-#no-page {
+#no-page,
+#merch-page,
+#wishlist-page {
   position: relative;
   z-index: 1;
   height: 100svh;
@@ -157,6 +173,7 @@ nav li a:hover {
   align-items: center;
   justify-content: center;
   gap: 100px;
+  transition: 0.5s ease-in-out;
 }
 
 #about-page .text {
@@ -165,13 +182,13 @@ nav li a:hover {
   padding: 10px;
   color: var(--yellow);
   box-shadow: 0 0 10px black;
+  position: relative;
   animation: downToUp 2s;
-  transition: 0.5s ease-in-out;
 }
 
 #about-page img {
+  position: relative;
   animation: loadIn 2s;
-  transition: 0.5s ease-in-out;
 }
 
 #about-page .text h1,
@@ -216,13 +233,16 @@ nav li a:hover {
 #mods-page .title {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  width: 70vw;
   color: var(--yellow);
   box-shadow: 0 0 10px black;
   text-align: center;
-  font-size: 1.25rem;
-  animation: downToUp 2s;
+  position: relative;
+  animation: h1-pop-up 2s;
   transition: 0.5s ease-in-out;
+}
+
+#mods-page .title h1 {
+  font-size: 3rem;
 }
 
 #mods-page .title h1,
@@ -244,6 +264,7 @@ nav li a:hover {
   height: 50svh;
   margin: 20px;
   background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
   padding: 20px;
   box-shadow: 0 0 10px black;
   font-family: 'Threefortysixbarrel';
@@ -306,17 +327,20 @@ nav li a:hover {
 #content-page h1 {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  width: 20vw;
   color: var(--yellow);
   box-shadow: 0 0 10px black;
   text-align: center;
   font-family: 'Threefortysixbarrel';
-  font-size: 1.25rem;
-  animation: downToUp 2s;
+  font-size: 3rem;
+  position: relative;
+  animation: h1-pop-up 2s;
   transition: 0.5s ease-in-out;
 }
 
 #content-page iframe {
+  position: relative;
+  animation: pop-out-bottom 2s;
+  transition: 0.5s ease-in-out;
   width: 50vw;
   height: auto;
   aspect-ratio: 16/9;
@@ -365,11 +389,212 @@ footer .social-media-container a:hover {
 #no-page {
   font-size: 1.5rem;
   color: var(--yellow);
-  font-family: 'Threefortysixbarrel';
+  font-family: 'Threefortysixbarrel', sans-serif;
   text-align: center;
 }
 
-@media (max-width: 768px) {
+#merch-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#merch-page .text,
+#merch-page .assets,
+#wishlist-page .text,
+#wishlist-page .assets {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#merch-page .text,
+#wishlist-page .text {
+  flex-direction: column;
+}
+
+.merch-container {
+  width: 90svw;
+  height: 70svh;
+}
+
+#merch-page a {
+  text-decoration: none;
+  color: transparent;
+}
+
+#merch-page a:hover h2 {
+  color: rgb(165, 1, 1);
+}
+
+#merch-page a:hover img {
+  scale: 1.2;
+}
+
+.merch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes pop-out-bottom {
+  0% {
+    bottom: -100vh;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes h1-pop-up {
+  0% {
+    top: -150vh;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes h1-pop-up {
+  0% {
+    top: -150vh;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes pop-out-left {
+  0% {
+    bottom: -100vh;
+    left: 15%;
+  }
+
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes pop-out-right {
+  0% {
+    bottom: -100vh;
+    right: 15%;
+  }
+
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+#merch-page .text h1,
+#merch-page .text h2,
+#wishlist-page .text h1,
+#wishlist-page .text h2 {
+  position: relative;
+  color: var(--yellow);
+  font-family: 'Threefortysixbarrel', sans-serif;
+  font-size: 3rem;
+  z-index: 100;
+  text-shadow: 0 0 10px black;
+}
+
+#merch-page .text h1,
+#wishlist-page .text h1 {
+  transition: 0.5s ease-in-out;
+  animation: h1-pop-up 2s;
+}
+
+#merch-page .text h2,
+#wishlist-page .text h2 {
+  font-family: 'Road Rage', sans-serif;
+  color: var(--blue);
+  transition: 0.5s ease-in-out;
+  animation: pop-out-bottom 2s;
+}
+
+.merch-container img {
+  position: relative;
+  transition: 0.5s ease-in-out;
+  width: 12vw;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.shirt {
+  animation: pop-out-left 2s;
+  rotate: -20deg;
+}
+
+.mug {
+  animation: pop-out-bottom 2s;
+}
+
+.hoodie {
+  animation: pop-out-right 2s;
+  rotate: 20deg;
+}
+
+#wishlist-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist-container {
+  width: 90svw;
+  height: 70svh;
+}
+
+#wishlist-page a {
+  text-decoration: none;
+  color: transparent;
+}
+
+#wishlist-page .text h2 {
+  font-family: 'Threefortysixbarrel', sans-serif;
+  color: var(--yellow);
+}
+
+#wishlist-page span {
+  color: var(--blue);
+  font-family: 'Road Rage', sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+#wishlist-page a:hover span {
+  color: rgb(165, 1, 1);
+}
+
+#wishlist-page a:hover img {
+  scale: 1.1;
+  box-shadow: 0 0 10px var(--yellow);
+}
+
+.wishlist-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.wishlist-container img {
+  position: relative;
+  transition: 0.5s ease-in-out;
+  animation: pop-out-bottom 2s;
+  width: 40vw;
+  border-radius: 20px;
+  height: auto;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
   header h1 {
     display: none;
   }
@@ -391,6 +616,14 @@ footer .social-media-container a:hover {
     }
   }
 
+  .text-nav {
+    display: none;
+  }
+
+  .icon-nav {
+    display: block;
+    font-size: 1.5rem;
+  }
   #about-page .text {
     width: 90%;
     position: relative;
@@ -413,5 +646,29 @@ footer .social-media-container a:hover {
 
   #mods-page .mods-container {
     height: 30svh;
+  }
+
+  #merch-page .merch-container,
+  #wishlist-page .wishlist-container {
+    flex-direction: column;
+  }
+
+  #merch-page .text,
+  #wishlist-page .text {
+    position: absolute;
+    
+    & h1, h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  #merch-page .assets img {
+    width: 30vw;
+    opacity: 0.75;
+  }
+
+  #wishlist-page .assets img {
+    width: 70vw;
+    opacity: 0.75;
   }
 }

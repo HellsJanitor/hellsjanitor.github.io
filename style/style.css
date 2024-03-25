@@ -18,6 +18,11 @@
   src: url('fonts/Threefortysixbarrel W00 Intake.otf');
 }
 
+@font-face {
+  font-family: 'Punisher';
+  src: url('fonts/Punishment-DPwE.ttf');
+}
+
 body {
   background-color: black;
   overflow: hidden;
@@ -38,7 +43,6 @@ header {
 header a {
   text-decoration: none;
   display: flex;
-  font-family: 'Threefortysixbarrel', sans-serif;
 }
 
 .logo {
@@ -58,6 +62,7 @@ header a {
 .logo h1 {
   font-family: 'Road Rage', sans-serif;
   text-rendering: geometricPrecision;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 nav {
@@ -88,7 +93,9 @@ nav li span {
   transition: 0.25s ease-in-out;
   text-decoration: none;
   color: white;
-  font-family: 'Threefortysixbarrel', sans-serif;
+  font-family: 'Punisher', sans-serif;
+  letter-spacing: 0.0625rem;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 nav li span:hover {
@@ -194,25 +201,29 @@ nav li span:hover {
 
 #about-page .text h1,
 #about-page .text p {
-  font-family: 'Threefortysixbarrel', sans-serif;
+  font-family: 'Punisher', sans-serif;
 }
 
 #about-page h1 {
   font-size: 3rem;
+  letter-spacing: 0.25rem;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #about-page p {
   font-size: 1.25rem;
+  letter-spacing: normal;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #about-page .text h1 span {
   color: var(--blue);
   margin-left: 10px;
-  font-family: 'Road Rage', sans-serif;
+  font-family: 'Punisher', sans-serif;
 }
 
 #about-page .text p span {
-  font-family: 'Threefortysixbarrel', sans-serif;
+  font-family: 'Punisher', sans-serif;
   color: red;
 }
 
@@ -243,7 +254,7 @@ nav li span:hover {
 }
 
 #mods-page .title h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 #mods-page .title h1,
@@ -252,7 +263,7 @@ nav li span:hover {
 }
 
 #mods-page #mod a {
-  font-family: 'Road Rage', sans-serif;
+  font-family: 'Punisher', sans-serif;
 }
 
 #mods-page .mods-container {
@@ -285,9 +296,15 @@ nav li span:hover {
   align-items: center;
 }
 
+#mods-page #mod h1 {
+  font-size: 3rem;
+  letter-spacing: 0.125rem;
+}
+
 #mods-page #mod a {
   text-decoration: none;
   color: var(--blue);
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 #mods-page #mod a:hover {
@@ -296,7 +313,7 @@ nav li span:hover {
 }
 
 #mods-page #mod h1 {
-  font-family: 'Road Rage', sans-serif;
+  font-family: 'Punisher', sans-serif;
   width: 100%;
   position: relative;
   top: 0;
@@ -331,11 +348,13 @@ nav li span:hover {
   color: var(--yellow);
   box-shadow: 0 0 10px black;
   text-align: center;
-  font-family: 'Threefortysixbarrel';
-  font-size: 3rem;
+  font-family: 'Punisher', sans-serif;
+  letter-spacing: 0.25rem;
+  font-size: 2.5rem;
   position: relative;
   animation: h1-pop-up 2s;
   transition: 0.5s ease-in-out;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #content-page iframe {
@@ -366,7 +385,9 @@ footer {
 }
 
 footer h1 {
-  font-family: 'Threefortysixbarrel', sans-serif;
+  font-family: 'Punisher', sans-serif;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 2px 2px 0 black;
+  letter-spacing: 0.25rem;
 }
 
 footer .social-media-container {
@@ -380,6 +401,7 @@ footer .social-media-container a {
   text-decoration: none;
   color: var(--yellow);
   transition: 0.2s ease-in-out;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 footer .social-media-container a:hover {
@@ -390,8 +412,14 @@ footer .social-media-container a:hover {
 #no-page {
   font-size: 1.5rem;
   color: var(--yellow);
-  font-family: 'Threefortysixbarrel', sans-serif;
   text-align: center;
+}
+
+.error-message h1,
+.error-message h2{
+  font-family: 'Punisher', sans-serif;
+  letter-spacing: 0.25rem;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #merch-page {
@@ -490,10 +518,11 @@ footer .social-media-container a:hover {
 #wishlist-page .text h2 {
   position: relative;
   color: var(--yellow);
-  font-family: 'Threefortysixbarrel', sans-serif;
-  font-size: 3rem;
+  font-family: 'Punisher', sans-serif;
+  font-size: 3.5rem;
   z-index: 100;
   text-shadow: 0 0 10px black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #merch-page .text h1,
@@ -504,9 +533,11 @@ footer .social-media-container a:hover {
 
 #merch-page .text h2,
 #wishlist-page .text h2 {
-  font-family: 'Road Rage', sans-serif;
+  font-family: 'Punisher', sans-serif;
+  text-align: center;
   color: var(--blue);
   transition: 0.5s ease-in-out;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   animation: pop-out-bottom 2s;
 }
 
@@ -549,14 +580,16 @@ footer .social-media-container a:hover {
 }
 
 #wishlist-page .text h2 {
-  font-family: 'Threefortysixbarrel', sans-serif;
+  font-family: 'Punisher', sans-serif;
   color: var(--yellow);
+  letter-spacing: 0.125rem;
 }
 
 #wishlist-page span {
   color: var(--blue);
-  font-family: 'Road Rage', sans-serif;
+  font-family: 'Punisher', sans-serif;
   transition: 0.5s ease-in-out;
+  letter-spacing: 0.125rem;
 }
 
 #wishlist-page a:hover span {
@@ -649,7 +682,7 @@ footer .social-media-container a:hover {
     position: absolute;
     
     & h1, h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 

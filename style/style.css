@@ -62,7 +62,6 @@ header a {
 .logo h1 {
   font-family: 'Road Rage', sans-serif;
   text-rendering: geometricPrecision;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 nav {
@@ -95,7 +94,6 @@ nav li span {
   color: white;
   font-family: 'Punisher', sans-serif;
   letter-spacing: 0.0625rem;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 nav li span:hover {
@@ -207,13 +205,11 @@ nav li span:hover {
 #about-page h1 {
   font-size: 3rem;
   letter-spacing: 0.25rem;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #about-page p {
   font-size: 1.25rem;
   letter-spacing: normal;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #about-page .text h1 span {
@@ -304,7 +300,6 @@ nav li span:hover {
 #mods-page #mod a {
   text-decoration: none;
   color: var(--blue);
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 #mods-page #mod a:hover {
@@ -354,7 +349,6 @@ nav li span:hover {
   position: relative;
   animation: h1-pop-up 2s;
   transition: 0.5s ease-in-out;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #content-page iframe {
@@ -386,7 +380,6 @@ footer {
 
 footer h1 {
   font-family: 'Punisher', sans-serif;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 2px 2px 0 black;
   letter-spacing: 0.25rem;
 }
 
@@ -401,7 +394,6 @@ footer .social-media-container a {
   text-decoration: none;
   color: var(--yellow);
   transition: 0.2s ease-in-out;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 footer .social-media-container a:hover {
@@ -419,7 +411,6 @@ footer .social-media-container a:hover {
 .error-message h2{
   font-family: 'Punisher', sans-serif;
   letter-spacing: 0.25rem;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #merch-page {
@@ -522,7 +513,6 @@ footer .social-media-container a:hover {
   font-size: 3.5rem;
   z-index: 100;
   text-shadow: 0 0 10px black;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #merch-page .text h1,
@@ -537,7 +527,6 @@ footer .social-media-container a:hover {
   text-align: center;
   color: var(--blue);
   transition: 0.5s ease-in-out;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   animation: pop-out-bottom 2s;
 }
 
